@@ -9,6 +9,7 @@ from src.battery.nubbin_battery import Nubbin
 
 class CarFactory:
 
+    @staticmethod
     def create_calliope(current_date: date, last_service_date: date,
                         current_mileage: int, last_service_mileage: int) -> Car:
         engine = CapuletEngine(current_mileage, last_service_mileage)
@@ -16,6 +17,7 @@ class CarFactory:
         car = Car(engine, battery)
         return car
 
+    @staticmethod
     def create_gilssade( current_date: date, last_service_date: date,
                         current_mileage: int, last_service_mileage: int) -> Car:
         engine = WilloughbyEngine(current_mileage, last_service_mileage)
@@ -30,6 +32,7 @@ class CarFactory:
         car = Car(engine, battery)
         return car
 
+    @staticmethod
     def create_rorschach(current_date: date, last_service_date: date,
                          current_mileage: int, last_service_mileage: int) -> Car:
         engine = WilloughbyEngine(current_mileage, last_service_mileage)
@@ -37,6 +40,7 @@ class CarFactory:
         car = Car(engine, battery)
         return car
 
+    @staticmethod
     def create_thovex( current_date: date, last_service_date: date,
                       current_mileage: int, last_service_mileage: int) -> Car:
 
